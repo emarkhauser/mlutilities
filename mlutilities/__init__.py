@@ -1,2 +1,2 @@
-from .module import *
-__version__ = '0.1'
+__init__.py:
+__all__ = ["estimate"]

@@ -1,5 +1,5 @@
 # Estimate
-def estimate(self.estimator, parameters, X_train, y_train, X_test):
+def estimate(self, estimator, parameters, X_train, y_train, X_test):
     from sklearn.model_selection import GridSearchCV
     # Fit the model
     model = GridSearchCV(estimator, parameters, cv=5, iid=False, n_jobs=-1)

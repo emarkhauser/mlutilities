@@ -12,7 +12,6 @@ def estimate(estimator, parameters, X_train, y_train, X_test):
     params = model.cv_results_['params']
     for mean, stdev, param in zip(means, stds, params):
         print("Score: %f (%f); Parameters: %r" % (mean, stdev, param))
-
     # Predict using the model
     return model.predict(X_test)
     

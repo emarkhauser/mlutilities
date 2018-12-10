@@ -1,6 +1,6 @@
 from setuptools import setup
 setup(name='mlutilities',
-      version='0.1',
+      version='1.0',
       description='Package common code for more efficient machine learning coding',
       url='https://github.com/emarkhauser/mlutilities',
       author='Erik Markhauser',

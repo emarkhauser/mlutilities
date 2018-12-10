@@ -1,7 +1,6 @@
 # Estimate
 def estimate(estimator, parameters, X_train, y_train, X_test):
     from sklearn.model_selection import GridSearchCV
-    # Fit the model
     model = GridSearchCV(estimator, parameters, cv=5, iid=False, n_jobs=-1)
     model.fit(X_train, y_train)
     print("BEST SCORE: %r; BEST PARAMETERS: %s" % (model.best_score_, model.best_params_))
@@ -11,8 +10,7 @@ def estimate(estimator, parameters, X_train, y_train, X_test):
     for mean, stdev, param in zip(means, stds, params):
         print("Score: %f (%f); Parameters: %r" % (mean, stdev, param))
     print("")
-    # Predict using the model
-    return model.predict(X_test)
+    return model
     
 # Classification Results
 def classificationResults(predicted, y_test):
